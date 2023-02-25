@@ -4,7 +4,8 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
+import { Image } from '@astrojs/image/components';
+import portrait from '~/assets/images/selfie.png';
 
 const meta = {
   title: SITE.title,
@@ -14,12 +15,9 @@ const meta = {
 ---
 
 <Layout {meta}>
-  <Content
-    rootState={'w-[18rem] rounded-full'}
-    image={{
-      src: import('~/assets/images/selfie.png'),
-    }}
-  />
+  <div class={'flex justify-center'}>
+    <Image src={portrait} alt="me" class={'rounded-full'} />
+  </div>
   <Hero>
     <Fragment slot="title">
       <span class="text-accent dark:text-white highlight">Jordan Ibrahim</span>
