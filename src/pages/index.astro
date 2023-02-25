@@ -15,17 +15,11 @@ const meta = {
 ---
 
 <Layout {meta}>
-  <div class={'flex justify-center'}>
-    <Image src={portrait} alt="me" class={'rounded-full w-[20rem]'} />
+  <div class={'flex content-center items-center flex-col flex-wrap'}>
+    <Image src={portrait} alt="me" class={'rounded-full w-[10rem]'} />
+    <span class="text-[2rem] dark:text-white">Jordan Ibrahim</span>
+    <span class="hidden sm:inline"> My Portfolio</span>
   </div>
-  <Hero>
-    <Fragment slot="title">
-      <span class="text-accent text-black dark:text-white highlight">Jordan Ibrahim</span>
-    </Fragment>
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline"> subtext</span>
-    </Fragment>
-  </Hero>
 
   <Steps
     title="Experience"

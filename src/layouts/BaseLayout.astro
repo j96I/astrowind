@@ -28,47 +28,39 @@ const { language = 'en', textDirection = 'ltr' } = SITE;
       img {
         content-visibility: auto;
       }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+      }
+
+      canvas {
+        width: 100%;
+        height: 200%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        pointer-events: auto;
+      }
     </style>
-
-    <main>
-      <style>
-        html,
-        body {
-          width: 100%;
-          height: 100%;
-        }
-
-        canvas {
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-
-        .promo-close {
-          width: 10%;
-          height: 100%;
-          text-align: left;
-          float: left;
-          font-size: 1.3em;
-        }
-      </style>
-      <script is:inline>
-        // @ts-nocheck
-        window.ga =
-          window.ga ||
-          function () {
-            (ga.q = ga.q || []).push(arguments);
-          };
-        ga.l = +new Date();
-        ga('create', 'UA-105392568-1', 'auto');
-        ga('send', 'pageview');
-      </script>
-      <canvas></canvas>
-      <span class="promo-close">&times;</span>
-
-      <script is:inline src="./script.js"></script>
-    </main>
+    <script is:inline>
+      // @ts-nocheck
+      window.ga =
+        window.ga ||
+        function () {
+          (ga.q = ga.q || []).push(arguments);
+        };
+      ga.l = +new Date();
+      ga('create', 'UA-105392568-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <canvas></canvas>
+    <span class="promo-close w-[100%] h-[100%]"></span>
+    <script is:inline src="./script.js"></script>
   </body>
 </html>
