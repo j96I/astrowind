@@ -11,7 +11,7 @@ interface Item {
 export interface Props {
   title?: string;
   items: Array<Item>;
-  image?: string | any; // TODO: find HTMLElementProps
+  image?: string | any;
 }
 
 const {
@@ -21,8 +21,8 @@ const {
 } = Astro.props;
 ---
 
-<section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl -my-24">
-  <div class="grid gap-6 row-gap-10">
+<section class="flex justify-center px-4 sm:px-6 mx-auto max-w-3xl">
+  <div class="grid gap-6">
     <div class="md:py-4 md:pr-16 mb-4 md:mb-0">
       {title && <h2 class="mb-8 text-3xl lg:text-4xl font-bold font-heading" set:html={title} />}
       {
