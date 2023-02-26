@@ -69,10 +69,9 @@ const { socialLinks = [], links = [], footNote = '', theme = 'light' } = Astro.p
           ''
         )
       }
-
-      <div class="text-sm mr-4 dark:text-slate-400">
-        <Fragment set:html={footNote} />
-      </div>
+    </div>
+    <div class="text-sm mr-4 dark:text-slate-400">
+      <Fragment set:html={footNote} />
     </div>
   </div>
 </footer>

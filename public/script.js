@@ -46,16 +46,20 @@ const canvas = document.getElementsByTagName('canvas')[0];
 resizeCanvas();
 
 let config = {
-    SIM_RESOLUTION: 256,
+    SIM_RESOLUTION: 128,
     DYE_RESOLUTION: 1024,
-    CAPTURE_RESOLUTION: 512,
     DENSITY_DISSIPATION: 3,
     VELOCITY_DISSIPATION: 2,
     PRESSURE: 0.5,
     PRESSURE_ITERATIONS: 20,
-    CURL: 30,
     SPLAT_RADIUS: 0.15,
     SPLAT_FORCE: 6000,
+    BLOOM_RESOLUTION: 256,
+    BLOOM_INTENSITY: 0.7,
+    BLOOM_THRESHOLD: 0.7,
+    
+    CAPTURE_RESOLUTION: 512,
+    CURL: 30,
     SHADING: true,
     COLORFUL: true,
     COLOR_UPDATE_SPEED: 10,
@@ -64,9 +68,6 @@ let config = {
     TRANSPARENT: false,
     BLOOM: true,
     BLOOM_ITERATIONS: 8,
-    BLOOM_RESOLUTION: 256,
-    BLOOM_INTENSITY: 0.7,
-    BLOOM_THRESHOLD: 0.7,
     BLOOM_SOFT_KNEE: 0.7,
     SUNRAYS: true,
     SUNRAYS_RESOLUTION: 196,
