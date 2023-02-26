@@ -24,7 +24,8 @@ const { title = await Astro.slots.render('title'), items = [] } = Astro.props;
 <section class="flex justify-center px-4 sm:px-20 mx-auto max-w-3xl">
   <div class="grid gap-6">
     <div class="md:py-4 md:pr-16 mb-4 ml-8 md:mb-0">
-      {title && <h2 class="mb-5 text-2xl lg:text-4xl font-bold font-heading text-white" set:html={title} />}
+      {title && <h2 class="mb-5 text-xl lg:text-l font-bold font-heading text-white" set:html={title} />}
+      <div class="w-full h-px dark:bg-slate-400 -translate-y-4"></div>
       {
         items &&
           items.length &&
