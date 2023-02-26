@@ -7,6 +7,11 @@ import { Image } from '@astrojs/image/components';
 import portrait from '~/assets/images/selfie.png';
 import PostTags from '~/components/blog/Tags.astro';
 
+import leidos from '~/assets/images/1.jpg';
+import telstra from '~/assets/images/2.jpg';
+import bp from '~/assets/images/3.jpg';
+import tryThai from '~/assets/images/4.jpg';
+
 const meta = {
   title: SITE.title,
   description: SITE.description,
@@ -35,23 +40,31 @@ const meta = {
         title: 'Leidos Australia',
         description:
           'Software Engineer within the C4ISR division developing bespoke microservices and web applications using primarily C#, React, Typescript, SQL, Docker and Gitlab.',
-        icon: 'tabler:package',
+        position: 'Software Engineer',
+        timeline: '2022+',
+        image: leidos,
       },
       {
         title: 'Telstra',
         description:
-          'Project technical specialist for the TPAMS PMO, a closed panel government contract providing telecommunication services. Ensuring smooth continuity across all aspects of Customer Service and Delivery.',
-        icon: 'tabler:letter-case',
+          'TPAMS project managment office, a closed panel government contract providing telecommunication services. Ensuring smooth continuity across all aspects of Customer Service and Delivery.',
+        position: 'Project Technical Specialist',
+        timeline: '2019 - 2020',
+        image: telstra,
       },
       {
         title: 'BP',
-        description: 'Console Operator',
-        icon: 'tabler:paint',
+        description: 'Customer service ...',
+        position: 'Console Operator',
+        timeline: '2014 - 2019',
+        image: bp,
       },
       {
         title: 'Try-Thai',
-        description: 'Cashier',
-        icon: 'tabler:paint',
+        description: 'Customer service ...',
+        position: 'Cashier',
+        timeline: '2009 - 2012',
+        image: tryThai,
       },
     ]}
   />
