@@ -40,7 +40,7 @@ const { links = [], isSticky = false, position = 'center' } = Astro.props;
               {links.map(({ ariaLabel, href, text, icon }) => (
                 <li>
                   <a
-                    class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-zinc-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-full text-sm p-2.5 inline-flex items-center"
+                    class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-zinc-800 focus:outline-none  rounded-full text-sm p-2.5 inline-flex items-center"
                     aria-label={ariaLabel}
                     href={href}
                   >
