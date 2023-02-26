@@ -33,7 +33,7 @@
 }
 
 #header.scroll {
-  @apply shadow-md md:shadow-lg bg-white md:bg-white/90 md:backdrop-blur-sm dark:bg-slate-900 dark:md:bg-slate-900/90;
+  @apply shadow-md md:shadow-lg bg-white md:bg-white/90 md:backdrop-blur-sm dark:bg-zinc-900 dark:md:bg-zinc-900/90;
 }
 
 .dropdown:hover .dropdown-menu {
