@@ -24,12 +24,16 @@ const meta = {
 ---
 
 <Layout {meta}>
-  <div class={'flex content-center items-center flex-col flex-wrap'}>
-    <Image src={portrait} alt="me" class={'rounded-full w-[10rem]'} />
-    <span class="text-[1rem] mt-2 dark:text-white">Hey I'm Jordan, welcome to my website!</span>
-  </div>
+  <section class="flex justify-center px-4 sm:px-20 mx-auto max-w-3xl -mt-2">
+    <div class="grid gap-6">
+      <div class={'flex content-center items-center flex-col flex-wrap'}>
+        <Image src={portrait} alt="me" class={'rounded-full w-[10rem]'} />
+        <span class="text-[1rem] mt-2 dark:text-white">Hey I'm Jordan, welcome to my website!</span>
+      </div>
+    </div>
+  </section>
 
-  <div class={'flex content-center items-center flex-col flex-wrap mt-5 mb-2'}>
+  <div class={'flex content-center items-center flex-col flex-wrap mt-5 '}>
     <PostTags tags={['C#', 'React', 'JavaScript', 'Typescript', '.NET Core v6', 'SQL', 'ASP.NET']} />
     <PostTags tags={['Redux', 'Docker', 'Microservices', 'Jenkins', 'RESTful WebServices']} />
     <PostTags tags={['Unit Testing', 'Test Development', 'Tailwind CSS', 'Gitlab']} />
@@ -41,7 +45,7 @@ const meta = {
       {
         title: 'Leidos Australia',
         description:
-          'Software Engineer within the C4ISR division developing bespoke microservices and web applications using primarily C#, React, .NET Core v6, SQL and Docker.',
+          'Full-Stack developer within the C4ISR division creating bespoke microservices and web applications using primarily C#, React, .NET Core v6, SQL and Docker.',
         position: 'Software Engineer',
         timeline: '2022+',
         image: leidos,
@@ -56,14 +60,14 @@ const meta = {
       },
       {
         title: 'BP',
-        description: 'Customer service ...',
+        description: 'Primarily customer service, problem-solving, inventory management and knowledge of procedures.',
         position: 'Console Operator',
         timeline: '2014 - 2019',
         image: bp,
       },
       {
         title: 'Try-Thai',
-        description: 'Customer service ...',
+        description: 'Primarily customer service, problem-solving, inventory management and knowledge of procedures.',
         position: 'Cashier',
         timeline: '2009 - 2012',
         image: tryThai,
@@ -109,9 +113,9 @@ const meta = {
             businesses holistically.
           </div>
           <div>
-            I pride myself on my ability to learn, and tenacity when problem solving. I hope to apply my outgoing and
-            enthusiastic nature to work in a friendly and learning environment, and in doing so, provide value in the
-            workplace. I am committed, approachable and very dependable.
+            I pride myself on my ability to learn, and tenacity when problem-solving. I hope to apply my outgoing and
+            enthusiastic nature to work in a friendly and learning-focused environment, and in doing so, provide value
+            in the workplace. I am committed, approachable and very dependable.
           </div>
         </div>
       </div>
@@ -127,17 +131,17 @@ const meta = {
         <p class="text-l font-bold dark:text-slate-300" set:html={'Teamwork & Leadership'} />
         <div class="pl-5 space-y-2 text-xs mt-1 content-center items-center">
           <div>
-            Ability to work in a team dynamic, demonstrated through the magnitude of group projects encountered through
-            my studies and in Industry.
+            Ability to work in a team dynamic, demonstrated through the magnitude of group projects encountered
+            throughout my studies and in industry.
           </div>
 
           <div>
             Leadership and management during my experience working at BP, having trained and accompanied a handful of
-            our now senior staff members.
+            their now senior staff members.
           </div>
         </div>
 
-        <p class="text-l font-bold dark:text-slate-300 mt-2" set:html={'Problem Solving'} />
+        <p class="text-l font-bold dark:text-slate-300 mt-2" set:html={'Problem-Solving'} />
         <div class="pl-5 space-y-2 text-xs mt-1 content-center items-center">
           <div>
             Entrusted throughout my time at Telstra to independently spearhead my own solution exploration, gathering
@@ -145,7 +149,7 @@ const meta = {
             procedures.
           </div>
           <div>
-            All university projects I have encountered require a great deal of problem solving in order to successfully
+            All university projects I have encountered require a great deal of problem-solving in order to successfully
             complete.
           </div>
           <div>
@@ -169,4 +173,6 @@ const meta = {
       </div>
     </div>
   </section>
+
+  <span class="flex justify-center text-xs mt-10 pr-14">© 2022 Jordan Ibrahim</span>
 </Layout>
