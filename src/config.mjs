@@ -7,7 +7,7 @@ const CONFIG = {
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'myPortfolio',
+  title: 'Portfolio',
   description:
     'Professional Portfolio',
   defaultImage: defaultImage,
