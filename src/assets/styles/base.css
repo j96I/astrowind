@@ -12,7 +12,7 @@
   }
 
   .bg-light {
-    background-color: var(--aw-color-bg-page);
+    @apply bg-zinc-900;
   }
 
   .bg-dark {
@@ -33,7 +33,7 @@
 }
 
 #header.scroll {
-  @apply shadow-md md:shadow-lg bg-white md:bg-white/90 md:backdrop-blur-sm dark:bg-zinc-900 dark:md:bg-zinc-900/90;
+  @apply shadow-md md:shadow-lg bg-zinc-900 md:bg-zinc-900 md:backdrop-blur-sm dark:bg-zinc-900 dark:md:bg-zinc-900/90;
 }
 
 .dropdown:hover .dropdown-menu {

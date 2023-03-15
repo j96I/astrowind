@@ -16,11 +16,11 @@ const { tags } = Astro.props;
   tags && Array.isArray(tags) && (
     <ul>
       {tags.map((tag) => (
-        <li class="bg-gray-100 dark:bg-zinc-900 inline-block mr-1 mb-2 py-0.5 px-2 font-medium rounded-full text-[0.8rem]">
+        <li class="bg-zinc-900  dark:bg-zinc-900 inline-block mr-1 mb-2 py-0.5 px-2 font-medium rounded-full text-[0.8rem]">
           {BLOG?.tag?.disabled ? (
             tag
           ) : (
-            <a href={getPermalink(tag, 'tag')} class="text-muted dark:bg-zinc-900 dark:text-white">
+            <a href={getPermalink(tag, 'tag')} class="text-muted text-white dark:bg-zinc-900 dark:text-white">
               {tag}
             </a>
           )}
