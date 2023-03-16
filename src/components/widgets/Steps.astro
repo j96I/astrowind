@@ -25,7 +25,7 @@ const { title = await Astro.slots.render('title'), items = [] } = Astro.props;
   <div class="grid gap-6 bg-black/[0.5] rounded-lg">
     <div class="py-4 md:pr-16 mb-4 ml-8 md:mb-0">
       {title && <h2 class="mb-5 text-xl lg:text-l font-bold font-heading text-white" set:html={title} />}
-      <div class="w-[20rem] sm:w-full h-px dark:bg-slate-400 bg-slate-400 -translate-y-4"></div>
+      <div class="w-[19rem] sm:w-full h-px dark:bg-slate-400 bg-slate-400 -translate-y-4"></div>
       {
         items &&
           items.length &&
@@ -47,12 +47,19 @@ const { title = await Astro.slots.render('title'), items = [] } = Astro.props;
               </div>
               <div class={`w-[16rem] sm:w-full ml-1 ${index !== items.length - 1 ? 'pb-8' : ''}`}>
                 <div class={`${position != null ? 'flex flex-col mb-1 -space-y-3' : ''}`}>
-                  {title && <p class="mb-2 text-l font-bold dark:text-slate-300 text-slate-300" set:html={title} />}
+                  {title && (
+                    <p
+                      class="w-[15rem] sm:w-full mb-2 text-l font-bold dark:text-slate-300 text-slate-300"
+                      set:html={title}
+                    />
+                  )}
                   {position && (
                     <p class="mb-2 text-xs font-semibold dark:text-slate-300 text-slate-300" set:html={position} />
                   )}
                 </div>
-                {description && <p class="text-sm dark:text-slate-400 text-slate-400" set:html={description} />}
+                {description && (
+                  <p class=" w-[14rem] sm:w-full text-sm dark:text-slate-400 text-slate-400" set:html={description} />
+                )}
               </div>
             </div>
           ))
