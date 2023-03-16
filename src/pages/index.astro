@@ -5,7 +5,6 @@ import Layout from '~/layouts/PageLayout.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import { Image } from '@astrojs/image/components';
 import portrait from '~/assets/images/selfie.png';
-import PostTags from '~/components/blog/Tags.astro';
 
 import leidos from '~/assets/images/1.jpg';
 import telstra from '~/assets/images/2.jpg';
@@ -35,11 +34,37 @@ const meta = {
     </div>
   </section>
 
-  <div class={'flex content-center items-center flex-col flex-wrap mt-5 '}>
-    <PostTags tags={['C#', 'React', 'JavaScript', 'Typescript', '.NET Core v6', 'SQL', 'ASP.NET']} />
-    <PostTags tags={['Redux', 'Docker', 'Microservices', 'Jenkins', 'RESTful WebServices']} />
-    <PostTags tags={['Unit Testing', 'Test Development', 'Tailwind CSS', 'Gitlab']} />
-  </div>
+  <section class="flex justify-center sm:px-20 mx-auto max-w-3xl">
+    <div class="sm:max-w-[22rem] mt-2 flex flex-row justify-center content-center items-center flex-wrap">
+      {
+        [
+          'C#',
+          'React',
+          'JavaScript',
+          'Typescript',
+          '.NET Core v6',
+          'SQL',
+          'ASP.NET',
+          'Redux',
+          'Docker',
+          'Microservices',
+          'Jenkins',
+          'RESTful WebServices',
+          'Unit Testing',
+          'Tailwind CSS',
+          'Confluence',
+          'Jira',
+          'Gitlab',
+        ].map((x) => {
+          return (
+            <span class=" mr-1 mb-2 py-1 font-medium text-[0.8rem] mt-2 px-2 bg-zinc-900 text-white dark:text-white rounded-full">
+              {x}
+            </span>
+          );
+        })
+      }
+    </div>
+  </section>
 
   <Steps
     title="Experience"
