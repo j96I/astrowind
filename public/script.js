@@ -39,10 +39,12 @@ promoPopupClose.addEventListener('click', e => {
     promoPopup.style.display = 'none';
 });
 
-
 // Simulation section
 
 const canvas = document.getElementsByTagName('canvas')[0];
+
+(window.innerWidth < 1000)? canvas.style.display = 'none': canvas.style.display = 'block';
+      
 resizeCanvas();
 
 let config = {

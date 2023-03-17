@@ -14,10 +14,12 @@ const { meta } = Astro.props;
 ---
 
 <Layout {meta}>
-  <slot name="header">
-    <Header isSticky showRssFeed showToggleTheme {...headerData} />
-  </slot>
-  <main>
-    <slot />
-  </main>
+  <div class="bg-[#4d595aa3]/20 z-[-10]">
+    <slot name="header">
+      <Header isSticky showRssFeed showToggleTheme {...headerData} />
+    </slot>
+    <main>
+      <slot />
+    </main>
+  </div>
 </Layout>
