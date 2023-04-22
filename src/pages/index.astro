@@ -14,6 +14,8 @@ import tryThai from '~/assets/images/4.png';
 import swinburne from '~/assets/images/5.jpg';
 import camberwell from '~/assets/images/6.jpg';
 import cisco from '~/assets/images/7.jpg';
+import TextDisplay from '~/components/widgets/TextDisplay';
+import Content from '~/components/widgets/Content';
 
 const meta = {
   title: SITE.title,
@@ -126,6 +128,23 @@ const meta = {
         image: cisco,
       },
     ]}
+  />
+
+  <Content
+    header="test"
+    content={(
+      <TextDisplay
+        items={[
+          {
+            title: 'Bachelor of Engineering (Software Engineering)(Honours) ',
+            description: 'a',
+          },
+          {
+            description: 'b',
+          },
+        ]}
+      />
+    )}
   />
 
   <section class="flex justify-center px-4 sm:px-20 mx-auto max-w-3xl">
