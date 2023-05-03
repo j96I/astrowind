@@ -1,40 +1,23 @@
 ---
-import { Picture } from '@astrojs/image/components';
+import { parse } from 'node-html-parser';
 
 export interface Props {
-  rootState?: string;
-  title?: string;
-  subtitle?: string;
-  highlight?: string;
-  content?: string;
-  image?: string | any; // TODO: find HTMLElementProps
-  isReversed?: boolean;
-  isAfterContent?: boolean;
+  header: string;
+  rootClass?: string;
 }
 
-const { image = await Astro.slots.render('image'), rootState = await Astro.slots.render('rootState') } = Astro.props;
+const { header, rootClass } = Astro.props;
+
+const rawHtmlSlides = await Astro.slots.render('default');
+const content = Array.from(parse(rawHtmlSlides).querySelectorAll('> *'));
 ---
 
-<div class="mx-auto max-w-7xl p-4 md:px-8">
-  <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
-    {
-      image && (
-        <div class={`relative m-auto max-w-4xl`}>
-          {typeof image === 'string' ? (
-            <Fragment set:html={image} />
-          ) : (
-            <Picture
-              class={`mx-auto w-full bg-gray-500 shadow-lg ${rootState}`}
-              width={500}
-              height={500}
-              widths={[400, 768]}
-              sizes="(max-width: 768px) 100vw, 432px"
-              aspectRatio={1}
-              {...image}
-            />
-          )}
-        </div>
-      )
-    }
+<section class="flex justify-center px-4 sm:px-20 mx-auto max-w-3xl my-3">
+  <div class="grid gap-6 bg-black/[0.5] rounded-lg">
+    <div class="py-4 md:pr-16 mb-4 ml-8 md:mb-0">
+      {header && <h2 class="mb-5 text-xl lg:text-l font-bold font-heading text-white" set:html={header} />}
+      <div class="w-[19rem] sm:w-full h-px dark:bg-slate-400 bg-slate-400 -translate-y-4"></div>
+      {content.map((x) => <div class={rootClass}>{x}</div>)}
+    </div>
   </div>
-</div>
+</section>

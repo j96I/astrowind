@@ -1,0 +1,27 @@
+---
+type Item = {
+  title?: string;
+  description: string;
+};
+
+type Props = {
+  items: Item[];
+};
+
+const { items = [] } = Astro.props;
+---
+
+<div>
+  {
+    items &&
+      items.length &&
+      <div class="-translate-y-2">
+      {items.map(({ title, description }) => (
+          <p class="text-l font-bold dark:text-slate-300 text-slate-300 mt-1 -mb-1"> {title}</p>
+          <div class="w-[19rem] sm:w-full pl-5 text-xs mt-1 content-center items-center">
+            <div class="flex flex-col py-1">{description}</div>
+          </div>
+      ))}
+      </div>
+  }
+</div>

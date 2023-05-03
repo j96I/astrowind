@@ -11,59 +11,54 @@ interface Item {
 }
 
 export interface Props {
-  title?: string;
   position?: string;
   timeline?: string;
   items: Array<Item>;
   image?: string | any;
 }
 
-const { title = await Astro.slots.render('title'), items = [] } = Astro.props;
+const { items = [] } = Astro.props;
 ---
 
-<section class="flex justify-center px-4 sm:px-20 mx-auto max-w-3xl my-3">
-  <div class="grid gap-6 bg-black/[0.5] rounded-lg">
-    <div class="py-4 md:pr-16 mb-4 ml-8 md:mb-0">
-      {title && <h2 class="mb-5 text-xl lg:text-l font-bold font-heading text-white" set:html={title} />}
-      <div class="w-[19rem] sm:w-full h-px dark:bg-slate-400 bg-slate-400 -translate-y-4"></div>
-      {
-        items &&
-          items.length &&
-          items.map(({ title, description, image, position, timeline }, index) => (
-            <div class="flex">
-              <div class="flex flex-col items-center mx-3">
-                <div class="flex items-center justify-center w-10 h-10 ">
-                  <div class="flex flex-col content-center items-center space-y-1">
-                    {image && <Image src={image} alt={`image_${index}`} class={'w-10 h-10'} />}
-                    {timeline && (
-                      <p
-                        class="mb-2 text-[9px] font-semibold dark:text-slate-300 text-slate-300 whitespace-nowrap"
-                        set:html={timeline}
-                      />
-                    )}
-                  </div>
-                </div>
-                <div class="w-px h-full dark:bg-slate-500 bg-slate-500 my-2" />
-              </div>
-              <div class={`w-[16rem] sm:w-full ml-1 ${index !== items.length - 1 ? 'pb-8' : ''}`}>
-                <div class={`${position != null ? 'flex flex-col mb-1 -space-y-3' : ''}`}>
-                  {title && (
+<section>
+  <div class="py-1">
+    {
+      items &&
+        items.length &&
+        items.map(({ title, description, image, position, timeline }, index) => (
+          <div class="flex">
+            <div class="flex flex-col items-center mx-3">
+              <div class="flex items-center justify-center w-10 h-10 ">
+                <div class="flex flex-col content-center items-center space-y-1">
+                  {image && <Image src={image} alt={`image_${index}`} class={'w-10 h-10'} />}
+                  {timeline && (
                     <p
-                      class="w-[15rem] sm:w-full mb-2 text-l font-bold dark:text-slate-300 text-slate-300"
-                      set:html={title}
+                      class="mb-2 text-[9px] font-semibold dark:text-slate-300 text-slate-300 whitespace-nowrap"
+                      set:html={timeline}
                     />
                   )}
-                  {position && (
-                    <p class="mb-2 text-xs font-semibold dark:text-slate-300 text-slate-300" set:html={position} />
-                  )}
                 </div>
-                {description && (
-                  <p class=" w-[14rem] sm:w-full text-sm dark:text-slate-400 text-slate-400" set:html={description} />
+              </div>
+              <div class="w-px h-full dark:bg-slate-500 bg-slate-500 my-2" />
+            </div>
+            <div class={`w-[16rem] sm:w-full ml-1 ${index !== items.length - 1 ? 'pb-8' : ''}`}>
+              <div class={`${position != null ? 'flex flex-col mb-1 -space-y-3' : ''}`}>
+                {title && (
+                  <p
+                    class="w-[15rem] sm:w-full mb-2 text-l font-bold dark:text-slate-300 text-slate-300"
+                    set:html={title}
+                  />
+                )}
+                {position && (
+                  <p class="mb-2 text-xs font-semibold dark:text-slate-300 text-slate-300" set:html={position} />
                 )}
               </div>
+              {description && (
+                <p class=" w-[14rem] sm:w-full text-sm dark:text-slate-400 text-slate-400" set:html={description} />
+              )}
             </div>
-          ))
-      }
-    </div>
+          </div>
+        ))
+    }
   </div>
 </section>
