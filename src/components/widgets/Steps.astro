@@ -21,13 +21,13 @@ const { items = [] } = Astro.props;
 ---
 
 <section>
-  <div class="py-1">
+  <div class="py-2 mx-1">
     {
       items &&
         items.length &&
         items.map(({ title, description, image, position, timeline }, index) => (
           <div class="flex">
-            <div class="flex flex-col items-center mx-3">
+            <div class="flex flex-col items-center">
               <div class="flex items-center justify-center w-10 h-10 ">
                 <div class="flex flex-col content-center items-center space-y-1">
                   {image && <Image src={image} alt={`image_${index}`} class={'w-10 h-10'} />}
@@ -41,7 +41,7 @@ const { items = [] } = Astro.props;
               </div>
               <div class="w-px h-full dark:bg-slate-500 bg-slate-500 my-2" />
             </div>
-            <div class={`w-[16rem] sm:w-full ml-1 ${index !== items.length - 1 ? 'pb-8' : ''}`}>
+            <div class={`w-[16rem] sm:w-full translate-x-7 ${index !== items.length - 1 ? 'pb-8' : ''}`}>
               <div class={`${position != null ? 'flex flex-col mb-1 -space-y-3' : ''}`}>
                 {title && (
                   <p
