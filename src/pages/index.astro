@@ -15,7 +15,7 @@ import swinburne from '~/assets/images/5.jpg';
 import camberwell from '~/assets/images/6.jpg';
 import cisco from '~/assets/images/7.jpg';
 import Content from '~/components/widgets/Content.astro';
-import TextDisplay from '~/components/widgets/TextDisplay.astro';
+// import TextDisplay from '~/components/widgets/TextDisplay.astro';
 
 const meta = {
   title: SITE.title,
@@ -41,22 +41,18 @@ const meta = {
       {
         [
           'C#',
-          'React',
+          'Python',
           'JavaScript',
           'Typescript',
-          '.NET Core v6',
-          'SQL',
-          'ASP.NET',
-          'Redux',
+          '.NET [EF Core]',
+          'React',
+          'Angular',
+          'Machine Learning [PyTorch]',
+          'AWS (EC2, Lambda, etc.)',
+          'CI/CD (Jenkins, Gitlab)',
           'Docker',
-          'Microservices',
-          'Jenkins',
-          'RESTful WebServices',
-          'Unit Testing',
-          'Tailwind CSS',
-          'Confluence',
-          'Jira',
-          'Gitlab',
+          'Redux',
+          'NgRx',
         ].map((x) => (
           <span class=" mr-1 mb-2 py-1 font-medium text-[0.8rem] mt-2 px-2 bg-zinc-900 text-white dark:text-white rounded-full">
             {x}
@@ -72,7 +68,7 @@ const meta = {
         {
           title: 'Leidos Australia',
           description:
-            'Full-Stack developer creating bespoke microservices and web applications using primarily C#, React, .NET Core v6, SQL and Docker.',
+            'Full stack Software Engineer developing bespoke microservices and web applications, with development not limited to any fixed technology or solution.',
           position: 'Software Engineer',
           timeline: '2022+',
           image: leidos,
@@ -130,7 +126,7 @@ const meta = {
     />
   </Content>
 
-  <Content header={'Professional Profile'}>
+  <!-- <Content header={'Professional Profile'}>
     <TextDisplay
       items={[
         {
@@ -143,9 +139,9 @@ const meta = {
         },
       ]}
     />
-  </Content>
+  </Content> -->
 
-  <Content header="Skill Highlights">
+  <!-- <Content header="Skill Highlights">
     <TextDisplay
       items={[
         {
@@ -181,7 +177,7 @@ const meta = {
         },
       ]}
     />
-  </Content>
+  </Content> -->
 
   <span class="translate-x-8 sm:translate-x-0 flex justify-center text-xs mt-6 pb-6 pr-14 text-white"
     >© 2023 Jordan Ibrahim</span
